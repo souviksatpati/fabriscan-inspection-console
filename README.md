@@ -107,7 +107,7 @@ The frontend persistence layer is decoupled from inference engines and hardware 
 
 ## Industrial Status Vocabulary
 
-Every status in the application strictly maps through the reusable `StatusBadge` component (`src/components/shared/StatusBadge.tsx` and `src/lib/status.ts`):
+Every status in the application strictly maps through the reusable `StatusBadge` component (`src/components/common/StatusBadge.tsx` and `src/constants/status.ts`):
 
 | Status | Tone | Border Style | Pulse | Description |
 |---|---|---|---|---|
@@ -139,7 +139,67 @@ The application includes four pre-configured industrial operator profiles access
 4. **Lead Systems Administrator (`sys_admin`)**:
    - Access: Complete root console (All routes including Camera Array, System Health, Line Settings, and Operators management)
 
-Route protection is enforced via `RequireRole` (`src/routes/RequireRole.tsx`), synchronized with the dynamic sidebar filter (`src/lib/roles.ts`).
+Route protection is enforced via `RequireRole` (`src/routes/RequireRole.tsx`), synchronized with the dynamic sidebar filter (`src/constants/roles.ts`).
+
+---
+
+## Project Structure
+
+```
+├── docs/
+│   ├── specs/        # Functional specifications, PRDs, and PDF documentation
+│   ├── prompts/      # AI prompts and generation guides
+│   └── screenshots/  # UI captures and reference screenshots
+├── public/
+│   ├── favicons/     # Application favicons and web clip icons
+│   └── images/       # Static public image assets
+├── scripts/          # Automation scripts (UI capture, etc.)
+└── src/
+    ├── assets/       # Media and static assets imported directly by code
+    ├── components/
+    │   ├── ui/       # shadcn/ui primitives only
+    │   ├── layout/   # Layout components (navbar, footer, sidebar, topbar, user menu)
+    │   ├── common/   # Reusable UI pieces (badges, empty states, headers, cards)
+    │   ├── marketing/# Public website sections (hero, how-it-works, surface-quality)
+    │   └── features/ # Domain feature components (inspection, etc.)
+    ├── constants/    # Global configuration, role definitions, and status maps
+    ├── data/         # Mock datasets and domain mock stores
+    ├── hooks/        # Custom React hooks (useXxx)
+    ├── layouts/      # Root route layout shells (PublicLayout, AppLayout)
+    ├── lib/          # Pure helper utilities (cn, formatters)
+    ├── pages/
+    │   ├── public/   # Public routes (Home, About, Login, NotFound)
+    │   └── app/      # Control room /app routes (LiveInspection, Production, etc.)
+    ├── routes/       # Router definition and route protection guards
+    ├── services/     # Client-side API abstractions, data stores, and exports
+    └── types/        # Shared TypeScript interfaces and domain type definitions
+```
+
+### Where to Put What
+
+| Folder | What Goes Here | Example |
+|---|---|---|
+| `docs/specs/` | Loose markdown and PDF specification documents | `fabriscan-spec.pdf`, `software-requirements-spec.md` |
+| `docs/prompts/` | Prompt templates and LLM guidance specs | `ui-prompt.md` |
+| `docs/screenshots/` | Full-page UI captures and reference screenshots | `hero.png`, `live_inspection.png` |
+| `public/favicons/` | Favicon icons, SVGs, Apple touch icons | `favicon.ico`, `apple-touch-icon.png` |
+| `public/images/` | Publicly served images referenced by static URL | `parts-1.webp`, `login-illustration.png` |
+| `src/assets/` | Static media files imported into TypeScript/React code | `parts-1.jpg` |
+| `src/components/ui/` | shadcn/ui and Radix UI primitive building blocks | `button.tsx`, `dialog.tsx`, `sheet.tsx` |
+| `src/components/layout/` | Shell navigation and persistent frame components | `Sidebar.tsx`, `TopBar.tsx`, `PublicNavbar.tsx` |
+| `src/components/common/` | Shared UI widgets, metric cards, status pills | `StatusBadge.tsx`, `MetricCard.tsx`, `Logo.tsx` |
+| `src/components/marketing/` | Public marketing landing page components | `Hero.tsx`, `HowItWorks.tsx`, `SurfaceQuality.tsx` |
+| `src/components/features/` | Complex app components grouped by domain | `features/inspection/CameraViewport.tsx` |
+| `src/constants/` | Constant configurations, route permissions, status metadata | `roles.ts`, `status.ts` |
+| `src/data/` | Mock seed data and static fixture objects | `mockAlerts.ts`, `mockCameras.ts`, `mockUsers.ts` |
+| `src/hooks/` | Custom React hooks named `useXxx.ts` | `useRole.ts`, `useInspectionStream.ts` |
+| `src/layouts/` | Top-level layout wrappers providing page shells | `AppLayout.tsx`, `PublicLayout.tsx` |
+| `src/lib/` | Pure helper utilities and style class merge helpers | `utils.ts`, `format.ts` |
+| `src/pages/public/` | Unauthenticated public page views | `Home.tsx`, `About.tsx`, `Login.tsx` |
+| `src/pages/app/` | Protected inspection console views | `LiveInspection.tsx`, `Production.tsx` |
+| `src/routes/` | Router definitions and role authorization guards | `router.tsx`, `RequireRole.tsx` |
+| `src/services/` | State stores, export engines, mock API / WebSocket clients | `inspectionStore.ts`, `reportExport.ts`, `auth.ts` |
+| `src/types/` | Shared TypeScript domain interfaces and types | `inspection.ts`, `status.ts`, `user.ts` |
 
 ---
 
