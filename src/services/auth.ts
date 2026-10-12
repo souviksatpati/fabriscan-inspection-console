@@ -1,6 +1,6 @@
-import { UserProfile } from '../../types/user';
-import { MOCK_USERS, DEFAULT_USER } from '../../data/mock/mockUsers';
-import { userStore, toUserProfile } from '../userStore';
+import { UserProfile } from '@/types/user';
+import { MOCK_USERS, DEFAULT_USER } from '@/data/mockUsers';
+import { userStore, toUserProfile } from '@/services/userStore';
 
 const STORAGE_KEY = 'fabriscan_user_session';
 

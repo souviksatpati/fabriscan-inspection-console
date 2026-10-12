@@ -1,4 +1,4 @@
-import { SystemAlert } from '../../types/alert';
+import { SystemAlert } from '@/types/alert';
 
 export const MOCK_ALERTS: SystemAlert[] = [
   {

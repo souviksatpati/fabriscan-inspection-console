@@ -1,7 +1,7 @@
 import React from 'react';
-import { Hero } from '../../components/landing/Hero';
-import { HowItWorks } from '../../components/landing/HowItWorks';
-import { SurfaceQuality } from '../../components/landing/SurfaceQuality';
+import { Hero } from '@/components/marketing/Hero';
+import { HowItWorks } from '@/components/marketing/HowItWorks';
+import { SurfaceQuality } from '@/components/marketing/SurfaceQuality';
 
 export const Home: React.FC = () => {
   return (

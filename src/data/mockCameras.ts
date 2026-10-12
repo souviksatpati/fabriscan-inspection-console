@@ -1,4 +1,4 @@
-import { CameraDevice } from '../../types/camera';
+import { CameraDevice } from '@/types/camera';
 
 export const MOCK_CAMERAS: CameraDevice[] = [
   {

@@ -1,4 +1,4 @@
-import { WebSocketEventMap, WebSocketEventName, WebSocketListener } from '../../types/events';
+import { WebSocketEventMap, WebSocketEventName, WebSocketListener } from '@/types/events';
 
 type AnyListener = (data: any) => void;
 

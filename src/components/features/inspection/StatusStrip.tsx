@@ -1,7 +1,7 @@
 import React from 'react';
-import { SystemStatus } from '../../types/status';
-import { StatusBadge } from '../common/StatusBadge';
-import { cn } from '../../lib/utils';
+import { SystemStatus } from '@/types/status';
+import { StatusBadge } from '@/components/common/StatusBadge';
+import { cn } from '@/lib/utils';
 
 interface StatusStripProps {
   lineStatus: SystemStatus;

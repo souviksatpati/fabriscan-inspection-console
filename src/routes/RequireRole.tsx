@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate, useLocation, Outlet } from 'react-router-dom';
 import { useRole } from '../hooks/useRole';
-import { hasRouteAccess, getAllowedRoutes } from '../lib/roles';
+import { hasRouteAccess, getAllowedRoutes } from '@/constants/roles';
 import { ShieldAlert } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Link } from 'react-router-dom';

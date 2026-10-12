@@ -1,4 +1,4 @@
-import { SystemStatus, StatusMeta } from '../types/status';
+import { SystemStatus, StatusMeta } from '@/types/status';
 
 export const STATUS_CONFIG: Record<SystemStatus, StatusMeta> = {
   RUNNING: {

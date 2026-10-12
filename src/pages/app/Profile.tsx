@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRole } from '../../hooks/useRole';
-import { getAllowedRoutes, ROLE_LABELS } from '../../lib/roles';
+import { getAllowedRoutes, ROLE_LABELS } from '@/constants/roles';
 import { User, Shield, KeyRound, Building2, Calendar, Clock, BadgeCheck, CheckCircle2 } from 'lucide-react';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 

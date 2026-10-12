@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRole } from '../../hooks/useRole';
-import { ROLE_LABELS } from '../../lib/roles';
+import { ROLE_LABELS } from '@/constants/roles';
 import {
   DropdownMenu,
   DropdownMenuContent,

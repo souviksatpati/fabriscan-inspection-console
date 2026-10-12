@@ -6,7 +6,7 @@ import {
   generateRandomPassword,
 } from '../../services/userStore';
 import { UserRole } from '../../types/user';
-import { ROLE_LABELS } from '../../lib/roles';
+import { ROLE_LABELS } from '@/constants/roles';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import {
   UserPlus,

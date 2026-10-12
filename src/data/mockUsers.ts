@@ -1,4 +1,4 @@
-import { UserProfile } from '../../types/user';
+import { UserProfile } from '@/types/user';
 
 export const MOCK_USERS: Record<string, UserProfile> = {
   qc: {

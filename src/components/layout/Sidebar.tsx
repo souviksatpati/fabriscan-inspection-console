@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useRole } from '../../hooks/useRole';
-import { authService } from '../../services/mock/auth';
-import { getAllowedRoutes } from '../../lib/roles';
+import { authService } from '@/services/auth';
+import { getAllowedRoutes } from '@/constants/roles';
 import { Logo } from '../common/Logo';
 import {
   Radio,

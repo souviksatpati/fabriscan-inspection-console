@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useRole } from '../../hooks/useRole';
-import { MOCK_USERS } from '../../data/mock/mockUsers';
+import { MOCK_USERS } from '@/data/mockUsers';
 import { Logo } from '../../components/common/Logo';
 import { ArrowLeft, Eye, EyeOff, Loader2, AlertCircle, ChevronDown, UserCheck, X } from 'lucide-react';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';

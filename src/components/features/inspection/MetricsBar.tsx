@@ -1,7 +1,7 @@
 import React from 'react';
-import { MetricCard } from '../common/MetricCard';
-import { formatNumber, formatPpm } from '../../lib/format';
-import { InspectionMetrics } from '../../services/inspectionStore';
+import { MetricCard } from '@/components/common/MetricCard';
+import { formatNumber, formatPpm } from '@/lib/format';
+import { InspectionMetrics } from '@/services/inspectionStore';
 
 interface MetricsBarProps {
   metrics: InspectionMetrics | {

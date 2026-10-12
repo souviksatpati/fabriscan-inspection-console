@@ -13,9 +13,9 @@ import {
   AlertTriangle,
   RotateCcw,
 } from 'lucide-react';
-import { Button } from '../ui/button';
-import { cameraStateService, CameraConnectionStatus } from '../../services/cameraState';
-import { InspectionRecord } from '../../services/inspectionStore';
+import { Button } from '@/components/ui/button';
+import { cameraStateService, CameraConnectionStatus } from '@/services/cameraState';
+import { InspectionRecord } from '@/services/inspectionStore';
 
 interface CameraViewportProps {
   inspection?: InspectionRecord | null;

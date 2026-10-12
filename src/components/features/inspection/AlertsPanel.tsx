@@ -1,8 +1,8 @@
 import React from 'react';
-import { SystemAlert } from '../../types/alert';
-import { StatusBadge } from '../common/StatusBadge';
-import { formatTime } from '../../lib/format';
-import { CornerBrackets } from '../common/CornerBrackets';
+import { SystemAlert } from '@/types/alert';
+import { StatusBadge } from '@/components/common/StatusBadge';
+import { formatTime } from '@/lib/format';
+import { CornerBrackets } from '@/components/common/CornerBrackets';
 import { Bell, Check } from 'lucide-react';
 
 interface AlertsPanelProps {

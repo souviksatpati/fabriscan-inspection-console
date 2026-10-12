@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { CameraViewport } from '../../components/dashboard/CameraViewport';
-import { CurrentPartTelemetry } from '../../components/dashboard/CurrentPartTelemetry';
-import { MetricsBar } from '../../components/dashboard/MetricsBar';
-import { RecentInspections } from '../../components/dashboard/RecentInspections';
-import { AlertsPanel } from '../../components/dashboard/AlertsPanel';
-import { StartBatchDialog } from '../../components/dashboard/StartBatchDialog';
+import { CameraViewport } from '@/components/features/inspection/CameraViewport';
+import { CurrentPartTelemetry } from '@/components/features/inspection/CurrentPartTelemetry';
+import { MetricsBar } from '@/components/features/inspection/MetricsBar';
+import { RecentInspections } from '@/components/features/inspection/RecentInspections';
+import { AlertsPanel } from '@/components/features/inspection/AlertsPanel';
+import { StartBatchDialog } from '@/components/features/inspection/StartBatchDialog';
 import { ExportReportDropdown } from '../../components/common/ExportReportDropdown';
 import { useInspectionStream } from '../../hooks/useInspectionStream';
 import { useRole } from '../../hooks/useRole';

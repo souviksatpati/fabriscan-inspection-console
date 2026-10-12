@@ -1,6 +1,6 @@
 import React from 'react';
-import { InspectionRecord } from '../../services/inspectionStore';
-import { CornerBrackets } from '../common/CornerBrackets';
+import { InspectionRecord } from '@/services/inspectionStore';
+import { CornerBrackets } from '@/components/common/CornerBrackets';
 import { Flag, CheckCircle2, ShieldAlert } from 'lucide-react';
 
 interface CurrentPartTelemetryProps {

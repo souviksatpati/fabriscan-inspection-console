@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { UserProfile } from '../types/user';
-import { authService } from '../services/mock/auth';
-import { hasRouteAccess } from '../lib/roles';
+import { authService } from '@/services/auth';
+import { hasRouteAccess } from '@/constants/roles';
 
 export function useRole() {
   const [user, setUser] = useState<UserProfile | null>(() => authService.getCurrentUser());

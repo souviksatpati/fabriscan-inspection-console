@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { batchService, PART_TYPES, STATIONS, BatchConfig } from '../../services/batchService';
-import { queryInspections } from '../../services/inspectionStore';
-import { Button } from '../ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
+import { batchService, PART_TYPES, STATIONS, BatchConfig } from '@/services/batchService';
+import { queryInspections } from '@/services/inspectionStore';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { PlayCircle, Barcode, CheckCircle2 } from 'lucide-react';
 
 interface StartBatchDialogProps {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { InspectionRecord } from '../../services/inspectionStore';
-import { CornerBrackets } from '../common/CornerBrackets';
+import { InspectionRecord } from '@/services/inspectionStore';
+import { CornerBrackets } from '@/components/common/CornerBrackets';
 import { Inbox } from 'lucide-react';
 
 interface RecentInspectionsProps {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MOCK_CAMERAS } from '../../data/mock/mockCameras';
+import { MOCK_CAMERAS } from '@/data/mockCameras';
 import { CameraDevice } from '../../types/camera';
 import { StatusBadge } from '../../components/common/StatusBadge';
 import { CornerBrackets } from '../../components/common/CornerBrackets';

@@ -1,4 +1,4 @@
-import { UserRole } from '../types/user';
+import { UserRole } from '@/types/user';
 
 export interface RoutePermission {
   path: string;

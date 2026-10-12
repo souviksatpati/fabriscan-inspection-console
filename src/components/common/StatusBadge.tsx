@@ -1,6 +1,6 @@
 import React from 'react';
 import { SystemStatus } from '../../types/status';
-import { getStatusMeta } from '../../lib/status';
+import { getStatusMeta } from '@/constants/status';
 import { cn } from '../../lib/utils';
 import {
   Play,

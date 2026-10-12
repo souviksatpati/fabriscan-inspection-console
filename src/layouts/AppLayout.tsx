@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Sidebar } from '../components/navigation/Sidebar';
-import { TopBar } from '../components/navigation/TopBar';
+import { Sidebar } from '@/components/layout/Sidebar';
+import { TopBar } from '@/components/layout/TopBar';
 import { Sheet, SheetContent } from '../components/ui/sheet';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
